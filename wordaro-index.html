@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WORDARO — Christian Discipleship Resources for Women</title>
+<meta name="description" content="Six beautiful resources for the woman who wants to walk with God consistently — in real life, at her own pace.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --cream: #F5F0E8;
+  --cream-dark: #EDE7DB;
+  --ink: #18140E;
+  --ink-mid: #3A3028;
+  --ink-light: #7A6E62;
+  --amber: #A07435;
+  --amber-mid: #7A5A22;
+  --amber-light: #C49A52;
+  --plum: #7A5A9A;
+  --rule: #D8D0C4;
+  --hero-bg: #E8DFF5;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 40;
+  background: rgba(245,240,232,0.94);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(216,208,196,0.6);
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 0 52px;
+}
+.nav-left  { display: flex; gap: 40px; }
+.nav-right { display: flex; gap: 40px; justify-content: flex-end; align-items: center; }
+.nav-link {
+  font-size: 10px; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-mid);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-link:hover { color: var(--plum); }
+.nav-brand {
+  font-family: 'EB Garamond', serif;
+  font-size: 19px; font-weight: 400; letter-spacing: 0.32em;
+  color: var(--ink); text-align: center;
+}
+.nav-cta {
+  font-size: 9.5px; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--cream);
+  background: var(--ink); padding: 9px 22px;
+  text-decoration: none; transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--plum); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 94vh;
+  background: var(--hero-bg);
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-content {
+  padding: 0 64px 96px;
+  max-width: 820px;
+}
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 9px; font-weight: 600; letter-spacing: 0.32em;
+  text-transform: uppercase; color: rgba(80,55,130,0.5);
+  margin-bottom: 36px;
+}
+.hero-eyebrow::after {
+  content: ''; display: block;
+  width: 40px; height: 1px;
+  background: rgba(80,55,130,0.2); flex-shrink: 0;
+}
+.hero-h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(72px, 9.5vw, 128px);
+  font-weight: 400; line-height: 0.94;
+  color: var(--ink);
+  margin-bottom: 40px;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--amber-mid);
+}
+.hero-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 19px; font-style: italic;
+  color: rgba(24,20,14,0.52);
+  line-height: 1.78; max-width: 480px;
+  margin-bottom: 44px;
+}
+.hero-actions { display: flex; gap: 18px; align-items: center; }
+.btn-primary {
+  font-size: 9.5px; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--cream);
+  background: var(--ink); padding: 13px 30px;
+  text-decoration: none; transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--plum); }
+.btn-ghost {
+  font-size: 9.5px; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(24,20,14,0.45);
+  text-decoration: none; display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--ink); }
+.btn-ghost::after { content: '→'; }
+
+/* ── INTRO BAND ── */
+.intro {
+  padding: 88px 64px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 96px; align-items: start;
+  border-bottom: 1px solid var(--rule);
+}
+.eyebrow {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.32em;
+  text-transform: uppercase; color: var(--amber);
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 22px;
+}
+.eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+.intro-heading {
+  font-family: 'EB Garamond', serif;
+  font-size: 44px; font-weight: 400;
+  color: var(--plum); line-height: 1.12; text-wrap: balance;
+}
+.intro-right { padding-top: 44px; }
+.quote {
+  font-family: 'EB Garamond', serif;
+  font-size: 19px; font-style: italic;
+  color: var(--ink-light); line-height: 1.82;
+  margin-bottom: 22px;
+  padding-left: 18px;
+  border-left: 2px solid rgba(160,116,53,0.3);
+}
+.body-text {
+  font-size: 13px; font-weight: 400; color: var(--ink-mid);
+  line-height: 1.88;
+}
+
+/* ── RESOURCES ── */
+.resources {
+  padding: 88px 64px 128px;
+}
+.resources-header {
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 52px; padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+.section-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 36px; font-weight: 400; color: var(--ink);
+}
+.section-count {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.24em;
+  text-transform: uppercase; color: var(--ink-light);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+@media (max-width: 960px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 580px)  { .product-grid { grid-template-columns: 1fr; } }
+
+/* ── PRODUCT CARD ── */
+.product-card {
+  display: flex; flex-direction: column;
+  background: var(--cream);
+  transition: background 0.2s;
+}
+.product-card:hover { background: #F9F5EF; }
+
+.cover-frame {
+  width: 100%; aspect-ratio: 8.5 / 11;
+  overflow: hidden; position: relative;
+}
+.cover-inner {
+  position: absolute; top: 0; left: 0;
+  width: 200%; height: 200%;
+  transform: scale(0.5); transform-origin: top left;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  padding: 56px 56px 52px;
+}
+.ci-top { display: flex; flex-direction: column; }
+.ci-brand {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px; font-weight: 600;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(247,244,238,0.5); margin-bottom: 80px;
+}
+.ci-eyebrow {
+  font-size: 17px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(247,244,238,0.62); margin-bottom: 14px;
+  font-family: 'Inter', sans-serif;
+}
+.ci-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 84px; font-weight: 400;
+  line-height: 0.95; color: #F7F4EE;
+  margin-bottom: 22px; white-space: pre-line;
+}
+.ci-subtitle {
+  font-family: 'EB Garamond', serif;
+  font-size: 27px; font-style: italic;
+  color: rgba(247,244,238,0.72);
+  line-height: 1.52; max-width: 440px;
+}
+.ci-bottom { flex-shrink: 0; }
+.ci-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+.ci-chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: rgba(247,244,238,0.65);
+  padding: 7px 16px; border: 1px solid rgba(247,244,238,0.22);
+}
+.ci-rule { width: 100%; height: 2px; background: rgba(247,244,238,0.12); margin-bottom: 22px; }
+.ci-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(247,244,238,0.35); line-height: 2.1;
+}
+
+.card-info {
+  padding: 24px 24px 22px;
+  display: flex; flex-direction: column;
+  flex: 1;
+}
+.card-series {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.26em;
+  text-transform: uppercase; color: var(--amber); margin-bottom: 8px;
+}
+.card-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px; font-weight: 400;
+  color: var(--ink); line-height: 1.2; margin-bottom: 8px;
+}
+.card-tagline {
+  font-family: 'EB Garamond', serif;
+  font-size: 14.5px; font-style: italic;
+  color: var(--ink-light); line-height: 1.65;
+  margin-bottom: 16px; flex: 1;
+}
+.card-price {
+  font-size: 13px; font-weight: 600; color: var(--ink);
+  margin-bottom: 12px;
+}
+.card-meta {
+  font-size: 9px; font-weight: 500; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #B8B0A4; margin-bottom: 16px;
+}
+.card-btn {
+  display: block; padding: 11px 16px;
+  font-size: 9.5px; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--cream);
+  background: var(--plum); border: 1px solid var(--plum);
+  text-align: center; text-decoration: none;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
+}
+.card-btn:hover {
+  background: var(--ink); border-color: var(--ink);
+}
+
+/* ── SCRIPTURE BAND ── */
+.scripture-band {
+  background: var(--plum);
+  padding: 100px 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.scripture-band::before {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  top: -200px; left: 50%; transform: translateX(-50%);
+  pointer-events: none;
+}
+.scripture-band::after {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+  bottom: -160px; right: 8%; pointer-events: none;
+}
+.band-eyebrow {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.32em;
+  text-transform: uppercase; color: rgba(196,154,82,0.7);
+  margin-bottom: 32px; position: relative; z-index: 1;
+}
+.band-quote {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(26px, 3.5vw, 46px);
+  font-weight: 400; font-style: italic;
+  color: var(--cream); line-height: 1.48;
+  max-width: 720px; margin: 0 auto 28px;
+  text-wrap: balance; position: relative; z-index: 1;
+}
+.band-ref {
+  font-size: 9.5px; font-weight: 500; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(245,240,232,0.32);
+  position: relative; z-index: 1;
+}
+
+/* ── STORY / LIGHT PATH sections ── */
+.content-section {
+  padding: 88px 64px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 96px; align-items: start;
+  border-bottom: 1px solid var(--rule);
+}
+.content-section.alt { background: var(--cream-dark); }
+
+/* ── FOOTER ── */
+footer {
+  padding: 44px 64px;
+  border-top: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-brand {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px; font-weight: 400; letter-spacing: 0.22em; color: var(--ink-mid);
+}
+.footer-note {
+  font-size: 9px; font-weight: 500; letter-spacing: 0.22em;
+  text-transform: uppercase; color: #B8B0A4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 880px) {
+  nav { padding: 0 28px; }
+  .hero-content { padding: 0 32px 72px; }
+  .intro, .content-section { grid-template-columns: 1fr; gap: 40px; padding: 64px 32px; }
+  .intro-right { padding-top: 0; }
+  .resources { padding: 64px 32px 96px; }
+  footer { padding: 36px 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-left">
+    <a class="nav-link" href="#resources">Resources</a>
+    <a class="nav-link" href="#lightpath">Light Path</a>
+    <a class="nav-link" href="#story">Our Story</a>
+  </div>
+  <div class="nav-brand">WORDARO</div>
+  <div class="nav-right">
+    <a class="nav-cta" href="#resources">Shop Resources</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Christian Discipleship &middot; For Every Woman &middot; Every Season</div>
+    <h1 class="hero-h1">Formed<br><em>by the Word.</em></h1>
+    <p class="hero-sub">Six resources for the woman who wants to go deeper with God — in real life, at her own pace, without pretending she has it together.</p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#resources">Shop Resources</a>
+      <a class="btn-ghost" href="#story">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── INTRO ── -->
+<section class="intro">
+  <div class="intro-left">
+    <div class="eyebrow">The WORDARO Way</div>
+    <h2 class="intro-heading">Formation that meets you where you actually are.</h2>
+  </div>
+  <div class="intro-right">
+    <p class="quote">"She is clothed with strength and dignity; she laughs without fear of the future."</p>
+    <p class="body-text">WORDARO resources are built for the woman in the middle of it all — the one showing up every day. Not the idealized version. The real one. Each resource is designed to be used, not just owned.</p>
+  </div>
+</section>
+
+<!-- ── RESOURCES ── -->
+<section class="resources" id="resources">
+  <div class="resources-header">
+    <div>
+      <div class="eyebrow" style="max-width:320px;">All Resources</div>
+      <h2 class="section-title">Six tools for the formation journey.</h2>
+    </div>
+    <div class="section-count">6 Available &middot; Digital PDF</div>
+  </div>
+
+  <div class="product-grid">
+
+    <!-- 1. Scripture Affirmation Cards -->
+    <div class="product-card">
+      <div class="cover-frame">
+        <div class="cover-inner" style="background:#2D4A3E;">
+          <div class="ci-top">
+            <div class="ci-brand">WORDARO &middot; LIGHT PATH SERIES</div>
+            <div class="ci-eyebrow">52 Cards &middot; Daily Affirmations</div>
+            <div class="ci-title">Scripture
+Affirmation
+Cards</div>
+            <div class="ci-subtitle">Fifty-two declarations rooted in Scripture — one for each week of the year.</div>
+          </div>
+          <div class="ci-bottom">
+            <div class="ci-chips">
+              <div class="ci-chip">Set 1 &middot; Identity</div>
+              <div class="ci-chip">Set 2 &middot; Peace</div>
+              <div class="ci-chip">Set 3 &middot; Strength</div>
+              <div class="ci-chip">Set 4 &middot; Calling</div>
+            </div>
+            <div class="ci-rule"></div>
+            <div class="ci-meta">52 Cards &middot; 4 Sets &middot; PDF</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-series">Light Path Series</div>
+        <div class="card-title">Scripture Affirmation Cards</div>
+        <div class="card-tagline">52 scripture-rooted declarations for daily formation.</div>
+        <div class="card-meta">52 Cards &middot; 4 Sets &middot; Digital PDF</div>
+        <a class="card-btn" href="#" target="_blank" rel="noopener">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- 2. Discipleship Workbook -->
+    <div class="product-card">
+      <div class="cover-frame">
+        <div class="cover-inner" style="background:#8B6BB8;">
+          <div class="ci-top">
+            <div class="ci-brand">WORDARO &middot; DEEP FORMATION SERIES</div>
+            <div class="ci-eyebrow">Deep Formation Study</div>
+            <div class="ci-title">The
+Discipleship
+Workbook</div>
+            <div class="ci-subtitle">Five movements that take you from encountering God's light to walking in it.</div>
+          </div>
+          <div class="ci-bottom">
+            <div class="ci-chips">
+              <div class="ci-chip">I &middot; Encounter</div>
+              <div class="ci-chip">II &middot; Examine</div>
+              <div class="ci-chip">III &middot; Release</div>
+              <div class="ci-chip">IV &middot; Receive</div>
+              <div class="ci-chip">V &middot; Walk</div>
+            </div>
+            <div class="ci-rule"></div>
+            <div class="ci-meta">57 Pages &middot; 5 Movements &middot; PDF</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-series">Deep Formation Series</div>
+        <div class="card-title">The Discipleship Workbook</div>
+        <div class="card-tagline">Five movements from encountering God's light to walking in it daily.</div>
+        <div class="card-meta">57 Pages &middot; 5 Movements &middot; Digital PDF</div>
+        <a class="card-btn" href="#" target="_blank" rel="noopener">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- 3. Prayer Practice Guide -->
+    <div class="product-card">
+      <div class="cover-frame">
+        <div class="cover-inner" style="background:#C07A65;">
+          <div class="ci-top">
+            <div class="ci-brand">WORDARO &middot; LIGHT PATH SERIES</div>
+            <div class="ci-eyebrow">30-Day Practice</div>
+            <div class="ci-title">Prayer
+Practice
+Guide</div>
+            <div class="ci-subtitle">A thirty-day path to a prayer life that actually holds.</div>
+          </div>
+          <div class="ci-bottom">
+            <div class="ci-chips">
+              <div class="ci-chip">Week 1 &middot; Posture</div>
+              <div class="ci-chip">Week 2 &middot; Voice</div>
+              <div class="ci-chip">Week 3 &middot; Listening</div>
+              <div class="ci-chip">Week 4 &middot; Rhythm</div>
+            </div>
+            <div class="ci-rule"></div>
+            <div class="ci-meta">30 Days &middot; 4 Weeks &middot; PDF</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-series">Light Path Series</div>
+        <div class="card-title">Prayer Practice Guide</div>
+        <div class="card-tagline">A thirty-day path to a prayer life that actually holds.</div>
+        <div class="card-meta">30 Days &middot; 4 Weeks &middot; Digital PDF</div>
+        <a class="card-btn" href="#" target="_blank" rel="noopener">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- 4. Season Assessment Guide -->
+    <div class="product-card">
+      <div class="cover-frame">
+        <div class="cover-inner" style="background:#B87A7A;">
+          <div class="ci-top">
+            <div class="ci-brand">WORDARO &middot; DEEP FORMATION SERIES</div>
+            <div class="ci-eyebrow">Seasonal Reflection</div>
+            <div class="ci-title">Season
+Assessment
+Guide</div>
+            <div class="ci-subtitle">See where you are before you decide where to go.</div>
+          </div>
+          <div class="ci-bottom">
+            <div class="ci-chips">
+              <div class="ci-chip">Soul</div>
+              <div class="ci-chip">Relationships</div>
+              <div class="ci-chip">Calling</div>
+              <div class="ci-chip">Body</div>
+            </div>
+            <div class="ci-rule"></div>
+            <div class="ci-meta">Reflection Guide &middot; PDF</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-series">Deep Formation Series</div>
+        <div class="card-title">Season Assessment Guide</div>
+        <div class="card-tagline">See where you are before you decide where to go.</div>
+        <div class="card-meta">Reflection Guide &middot; Digital PDF</div>
+        <a class="card-btn" href="#" target="_blank" rel="noopener">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- 5. Small Group Kit -->
+    <div class="product-card">
+      <div class="cover-frame">
+        <div class="cover-inner" style="background:#7A9E8A;">
+          <div class="ci-top">
+            <div class="ci-brand">WORDARO &middot; COMMUNITY SERIES</div>
+            <div class="ci-eyebrow">Group Formation Kit</div>
+            <div class="ci-title">Small
+Group
+Kit</div>
+            <div class="ci-subtitle">Everything a circle of women needs to go deeper together.</div>
+          </div>
+          <div class="ci-bottom">
+            <div class="ci-chips">
+              <div class="ci-chip">Facilitator Guide</div>
+              <div class="ci-chip">Discussion Cards</div>
+              <div class="ci-chip">Reflection Sheets</div>
+            </div>
+            <div class="ci-rule"></div>
+            <div class="ci-meta">Multi-Part Kit &middot; PDF</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-series">Community Series</div>
+        <div class="card-title">Small Group Kit</div>
+        <div class="card-tagline">Everything a circle of women needs to go deeper together.</div>
+        <div class="card-meta">Multi-Part Kit &middot; Digital PDF</div>
+        <a class="card-btn" href="#" target="_blank" rel="noopener">Buy Now</a>
+      </div>
+    </div>
+
+    <!-- 6. WORDARO Journal -->
+    <div class="product-card">
+      <div class="cover-frame">
+        <div class="cover-inner" style="background:#A07A35;">
+          <div class="ci-top">
+            <div class="ci-brand">WORDARO &middot; THE JOURNAL</div>
+            <div class="ci-eyebrow">12-Week Formation Journal</div>
+            <div class="ci-title">The
+WORDARO
+Journal</div>
+            <div class="ci-subtitle">Twelve weeks of guided reading, reflection, writing, and prayer.</div>
+          </div>
+          <div class="ci-bottom">
+            <div class="ci-chips">
+              <div class="ci-chip">Read</div>
+              <div class="ci-chip">Reflect</div>
+              <div class="ci-chip">Write</div>
+              <div class="ci-chip">Pray</div>
+            </div>
+            <div class="ci-rule"></div>
+            <div class="ci-meta">50 Pages &middot; 12 Weeks &middot; PDF</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-info">
+        <div class="card-series">Signature Resource</div>
+        <div class="card-title">The WORDARO Journal</div>
+        <div class="card-tagline">Twelve weeks of guided reading, reflection, writing, and prayer.</div>
+        <div class="card-meta">50 Pages &middot; 12 Weeks &middot; Digital PDF</div>
+        <a class="card-btn" href="#" target="_blank" rel="noopener">Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── LIGHT PATH ── -->
+<section class="content-section alt" id="lightpath">
+  <div>
+    <div class="eyebrow">Light Path Series</div>
+    <h2 class="intro-heading">Everyday formation for the woman in the middle of real life.</h2>
+    <p class="body-text" style="margin-top:32px; color:var(--ink-light);">The Light Path Series isn't a program. It's a posture — one that says you can walk closely with God even when life is full and hard and beautiful all at once. These resources were built around a single question: what does it look like to stay formed when you don't have hours to spare?</p>
+  </div>
+  <div style="padding-top:44px;">
+    <p class="quote">"She opens her mouth with wisdom, and the teaching of kindness is on her tongue."<br><span style="font-size:12px; letter-spacing:0.18em; font-family:'Inter',sans-serif; font-style:normal; color:rgba(122,110,98,0.55);">PROVERBS 31:26</span></p>
+    <p class="body-text">The Light Path Series is designed for women who want to walk with God consistently — not perfectly. Each resource is accessible and practical: a 30-day prayer guide that builds real rhythm, scripture affirmation cards that anchor your identity week by week, and a formation journal that guides you through twelve weeks of honest, unhurried reflection.</p>
+    <p class="body-text" style="margin-top:20px;">These aren't workbooks that demand three hours on a Sunday morning. They're tools that travel with you — through the carpool line, the quiet Tuesday, the season where nothing feels like enough. The Light Path meets you there and points you forward.</p>
+    <p class="body-text" style="margin-top:20px;">Every resource in the series is designed to stand alone or work together. Start with the Prayer Practice Guide and let it open you. Move into the Affirmation Cards and let them hold you. Come back to the Journal when you're ready to go deeper. There's no wrong door in.</p>
+  </div>
+</section>
+
+<!-- ── OUR STORY ── -->
+<section class="content-section" id="story">
+  <div>
+    <div class="eyebrow">Our Story</div>
+    <h2 class="intro-heading">Built for the woman who keeps showing up.</h2>
+    <p class="body-text" style="margin-top:32px; color:var(--ink-light);">WORDARO started not with a business plan, but with a gap — the distance between the kind of discipleship resources available and the kind of women who actually needed them. Women in the thick of ordinary life. Women who love God and are still trying to figure it all out.</p>
+  </div>
+  <div style="padding-top:44px;">
+    <p class="quote">"Your word is a lamp to my feet and a light to my path."<br><span style="font-size:12px; letter-spacing:0.18em; font-family:'Inter',sans-serif; font-style:normal; color:rgba(122,110,98,0.55);">PSALM 119:105</span></p>
+    <p class="body-text">WORDARO began with a simple conviction: Christian women deserve resources that take their real lives seriously. Not idealized versions. Not spiritual highlight reels. Just honest, beautiful tools for formation — wherever you are in the season. The name carries the word at the center of everything: the Word. That's what WORDARO is built around.</p>
+    <p class="body-text" style="margin-top:20px;">Every resource we create is shaped by the same belief — that formation doesn't require a degree, a retreat, or a quiet house. It requires a willingness to return. To the Word. To the practice. To the God who meets us in the middle of the mess and calls it holy ground.</p>
+    <p class="body-text" style="margin-top:20px;">We design with care because we believe beauty matters. A well-crafted resource is an act of respect — it says your time and your spirit are worth the investment. We make things that feel as good to hold as they are to use. And we make them for you: the woman showing up one more time, in whatever season this is, choosing to be formed.</p>
+  </div>
+</section>
+
+<!-- ── SCRIPTURE BAND ── -->
+<section class="scripture-band">
+  <div class="band-eyebrow">The Anchor</div>
+  <p class="band-quote">"Your word is a lamp to my feet and a light to my path."</p>
+  <div class="band-ref">Psalm 119:105</div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">WORDARO</div>
+  <div class="footer-note">Christian Discipleship &middot; For Every Woman &middot; Every Season</div>
+</footer>
+
+</body>
+</html>
